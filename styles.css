@@ -1,0 +1,142 @@
+.sillyList {
+    font-style: italic;
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+.subheading {
+    background-color: #333;
+    font-size: 18px;
+    color: white;
+    padding: 10px 10px 10px;
+    text-align: center;
+}
+
+.on{
+    color: white;
+    padding: 10px 10px 10px;
+    
+}
+
+.off{
+    color: white;
+    padding: 10px 10px 10px;
+    text-decoration:none;
+    text-align: center;
+}
+
+header {
+    background-image: linear-gradient(to right, #cc2b5e , #753a88);
+    font-size: 18px 0;
+    color: white;
+    padding: 0.5rem 0;
+    text-align: center;
+
+}
+
+main {
+    padding: 1rem;
+    flex: 1;  
+    text-align: left; 
+}
+
+.center {
+    text-align: center;
+    padding: 0rem;
+    flex: 1;
+}
+
+.button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration:none;
+    text-align: center;
+}
+.leftbox {
+    text-align: left;
+    border: #333;
+    border-width: thin;
+    border-style: solid;
+    float: left;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 1%;
+    font-size: 1rem;
+    width: 45%;
+    
+}
+.rightbox {
+    text-align: left;
+    border: #333;
+    border-width: thin;
+    border-style: solid;
+    float: right;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 1%;
+    font-size: 1rem;
+    width: 45%;
+    
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    margin-top: 1rem;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+ul {
+    list-style-position: inside; 
+    text-align: left; 
+    padding: 0; 
+    
+}
+
+ol {
+    list-style-position: inside;
+    text-align: left; 
+    padding: 0; 
+    display: inline-block;
+}
+
+li{
+    margin: 10px 0;
+}
+
+ul > li {
+    margin-left: 20px;
+}
+
+img.new {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0%;
+    text-align: center;
+
+}
