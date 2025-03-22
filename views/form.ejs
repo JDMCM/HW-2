@@ -1,11 +1,16 @@
 <%- include('./partials/header') %>
 <body>
-    <h1>Enter new book information:</h1>
+    <h1>Enter new recipe information:</h1>
     <form action="./addrecipe" method="post">
         <label for="name">Recipe title:</label>
-        <input type="text" name="name" id="name"><br>
+        <input type="text" name="rname" id="rname"><br>
         <label for="author">Author:</label>
         <input type="text" name="author" id="author"><br>
+        <h2>Select Key Ingredients:</h2>
+        <% ingredients.forEach(ingredient => {%>
+            <input type="checkbox" id="<%= information.iname %>" name="<%= information.iname %>" value="<%= information.iname %>">
+            <label for="<%= information.iname %>">HTML</label><br>
+        <%}); %>
         <label for="ingredient">Ingredients:</label>
         <input type="text" name="ingredient" id="ingredient"><br>
         <label for="instructions">Instructions:</label>
