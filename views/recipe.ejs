@@ -1,0 +1,15 @@
+<%- include('./partials/header',{a1: 'off',a2: 'off',a3: 'off',}) %>
+
+
+    <h1><%= recipe.rname %></h1>
+    <div class="content-section">
+        <div class="column">
+            <h2>Ingredients</h2>
+            <p><%= recipe.ingredients %></p>
+        </div>
+        <div class="column">
+            <h2>Instructions</h2>
+            <p><%= recipe.instructions %></p>
+        </div>
+    </div>
+</body>

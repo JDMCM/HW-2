@@ -1,13 +1,10 @@
-<%- include('./partials/header') %>
-<body>
+<%- include('./partials/header',{ptitle:'Recipe Index'}) %>
+
+
+    <h1>Recipes:</h1>
 <ul>
     <% recipes.forEach((recipe)=> { %>
-        <li>
-            <h2>
-               <%= recipe.name %>
-            </h2>
-            
-        </li>
+        <li><%= recipe.rname %></li>
     <% }) %>
 </ul>
 </body>

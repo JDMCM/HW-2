@@ -3,16 +3,18 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title><%= title %></title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
         <header>
-            <h1>Welcome to My Website</h1>
+            <h1><%= ptitle %></h1>
         </header>
         <nav>
+            <!-- a1,a2,a3 correspond to which page is selected currently -->
             <div class="subheading">
-                <a href= "home.html" class="on">Home</a>
-                <a href= "index.html" class="off">Recipe Index </a>
-                <a href= "form.html" class="off">Add Recipe Page</a></div>
+                <a href= "/" class=<%= a1 %>>Home</a>
+                <a href= "/index" class=<%= a2 %>>Recipe Index </a>
+                <a href= "/form" class=<%= a3 %>>Add Recipe Page</a>
+            </div>
         </nav>
-    <body>
+   
