@@ -6,23 +6,23 @@
         <div class="centerbox">   
             <form action="./form" method="post" id="form">
                 <h2>Enter new recipe information:</h2><br>
-                <label for="rname">Recipe Title:</label><br>
+                <label for="rname"><h4>Title:</h4> </label>
                 <input type="text" name="rname" id="rname" maxlength="45"><br>
-                <label for="author">Author of Recipe:</label><br>
+                <label for="author"><h4>Author of Recipe:</h4></label>
                 <input type="text" name="author" id="author" maxlength="45"><br>
                 
-                <label for="descript">Please give a brief description of the recipe:</label><br>
+                <label for="descript"><h4>Please give a brief description of the recipe:</h4></label>
                 <textarea type="text" name="descript" id="descript" rows="4" cols="50"></textarea><br>
-                <p>Select Key Ingredients:</p>
+                <h4>Select Key Ingredients:</h4>
                 <% ingredients.forEach(ingredient => {%>
                     <input type="checkbox" id="<%= ingredient.iname %>" name="checkboxes" value="<%= ingredient.iname %>">
                     <div class="tooltip"><label for="<%= ingredient.iname %>"><%= ingredient.iname %></Label></label>
                         <span class="tooltiptext"><%= ingredient.description %></span>
                     </div><br>
                 <%}); %>
-                <label for="ingredients">Enter all ingredients in the recipe:</label><br>
+                <label for="ingredients"><h4>Enter all ingredients in the recipe in the following format:<br>(ingredient name, next ingredient name, ..)</h4></label>
                 <textarea type="text" name="ingredients" id="ingredients" rows="4" cols="50"></textarea><br>
-                <label for="instructions">Please give the step by step instructions for the recipe:</label><br>
+                <label for="instructions"><h4>Please give the step by step instructions for the recipe:</h4></label>
                 <textarea type="text" name="instruct" id="instruct" rows="10" cols="50"></textarea><br>
                 <input type="submit" value="Add Recipe">
             </form>

@@ -1,37 +1,31 @@
 <%- include('./partials/header',{a1: 'off',a2: 'off',a3: 'off',ptitle: recipe.rname}) %>
 
-
-    <h1><%= recipe.rname %></h1>
-    <h2>by: <%= recipe.author %></h2>
-    <div class="centerbox">
+    
+    <div class="content-section">
         <ul> 
+            <h1><%= recipe.rname %></h1>
+            <h2>by: <%= recipe.author %></h2>
             <h3>Recipe Description:</h3>
-            <div class column>
-                <ol><%= recipe.descript %></ol>
-            </div>
+            <p><%= recipe.descript %></p>
+            
             <h3>Ingredients:</h3>
-            <div class="column">
-                <ol type="1">
-                    <% ingredlist.forEach((ingred)=> { %>
-                        <li><%= ingred %></li>
-                    <% }) %>
-                </ol>
-            </div>
+        
+            <ol type="1">
+                <% ingredlist.forEach((ingred)=> { %>
+                    <li><%= ingred %></li>
+                <% }) %>
+            </ol>
+
             <h3>Instructions:</h3>
             <p><%= recipe.instructions %></p>
             <h3>Key Ingredients:</h3>
-                <div class="column">  
-                        <% ingredients.forEach((ingred)=> { %>
-                            <div class="tooltip">*<%= ingred.iname %>
-                                <span class="tooltiptext"><%= ingred.description %></span>
-                            </div>
-                        <% }) %>
-                    
-                </div>
+            <div class='column'>    
+                <% ingredients.forEach((ingred)=> { %>
+                    <div class="tooltip">*<%= ingred.iname %>
+                        <span class="tooltiptext"><%= ingred.description %></span>
+                    </div>
+                <% }) %>
+            </div>
         </ul>
-       
-        
-            
-    
     </div>
 </body>
