@@ -10,10 +10,15 @@
                 <input type="text" name="rname" id="rname" maxlength="45"><br>
                 <label for="author">Author of Recipe:</label><br>
                 <input type="text" name="author" id="author" maxlength="45"><br>
+                
+                <label for="descript">Please give a brief description of the recipe:</label><br>
+                <textarea type="text" name="descript" id="descript" rows="4" cols="50"></textarea><br>
                 <p>Select Key Ingredients:</p>
                 <% ingredients.forEach(ingredient => {%>
                     <input type="checkbox" id="<%= ingredient.iname %>" name="checkboxes" value="<%= ingredient.iname %>">
-                    <label for="<%= ingredient.iname %>"><%= ingredient.iname %></Label></label><br>
+                    <div class="tooltip"><label for="<%= ingredient.iname %>"><%= ingredient.iname %></Label></label>
+                        <span class="tooltiptext"><%= ingredient.description %></span>
+                    </div><br>
                 <%}); %>
                 <label for="ingredients">Enter all ingredients in the recipe:</label><br>
                 <textarea type="text" name="ingredients" id="ingredients" rows="4" cols="50"></textarea><br>

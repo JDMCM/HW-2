@@ -1,11 +1,42 @@
+
 <%- include('./partials/header',{ptitle:'Recipe Index'}) %>
 
-
-    <h1>Recipes:</h1>
-<ul>
-    <% recipes.forEach((recipe)=> { %>
-        <li><%= recipe.rname %></li>
-    <% }) %>
-</ul>
+<div class="topnav">
+    <div class="search-container">
+        <form action="./index" method='post' id="searchbar">
+        <input type="text" placeholder="Search.." name="search" id="search">
+        <button type="submit">Enter</button>
+        </form>
+    </div>
+</div>
+    
+    
+    <div class="content-section">
+        <ul style="list-style-type:none">
+            <% recipes.forEach(recipe => {%>
+                <li><h3>Recipes with <%= recipe.iname %>:</h3></li>
+                    <table>
+                        <tr>
+                            <th>Recipe Name:</th>
+                            <th>Description:</th>
+                            <th>Author:</th>
+                        </tr>
+                       
+                            <% for (let i = 0; i < recipe.rnamess.split(',').length; i++) {%>
+                                <tr>
+                                    <td><a href="/recipe/<%= recipe.rnamess.split(',')[i]%>"><%= recipe.rnamess.split(',')[i]%></a></td>
+                                    <td><%= recipe.descriptions.split(',')[i]%></td>
+                                    <td><%= recipe.authors.split(',')[i]%></td>
+                                </tr>
+                            <%}; %>
+                        
+                        
+                    </table>
+                
+            <%}); %> 
+        </ul>
+    </div>    
+   
+    
 </body>
 <html>
