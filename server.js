@@ -18,7 +18,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.render('home', {title: 'Home', a1: 'on', a2: 'off', a3: 'off'});
 });
-//get the naames of the recipes then render the homepage
+//get the names of the recipes then render the homepage
 app.get("/index",(req,res) => {
     sql = 'SELECT iname, GROUP_CONCAT ( junct.rname ) as "rnamess", GROUP_CONCAT ( recipes_table.descript ) as "descriptions", GROUP_CONCAT ( recipes_table.author ) as "authors" FROM junct JOIN recipes_table ON recipes_table.rname = junct.rname  GROUP BY iname'
     db.query(sql,(err,result) => {
